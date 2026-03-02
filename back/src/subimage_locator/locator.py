@@ -237,11 +237,6 @@ def _locate_with_template(
         visualization_path=None
     )
 
-#el sistema convierte ambas imágenes a gris, intenta localizar small 
-# dentro de big primero por emparejado de características 
-# (SIFT/AKAZE/ORB + RANSAC + ajuste de similaridad) y,
-# si eso falla, hace un barrido multi-escala con template matching (ZNCC).
-# Devuelve un objeto LocateResult con found, method, scale, x,y, corners, inliers/score y confidence.
 
 def locate_subimage(
     big_bgr: np.ndarray,
